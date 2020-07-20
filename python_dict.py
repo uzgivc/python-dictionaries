@@ -5,12 +5,15 @@ The function should return the sum of the values of the dictionary
 """
 # Write your sum_values function here:
 
-# Uncomment these function calls to test your sum_values function:
-# print(sum_values({"milk":5, "eggs":2, "flour": 3}))
+def sum_values(my_dictionary):
+ sum = 0
+ for i in my_dictionary.values():
+   sum = sum + i
+ return sum
+print(sum_values({"milk":5, "eggs":2, "flour": 3}))
 # should print 10
-# print(sum_values({10:1, 100:2, 1000:3}))
+print(sum_values({10:1, 100:2, 1000:3}))
 # should print 6
-
 
 """
 2. EvenKeys
@@ -18,15 +21,18 @@ Create a function called sum_even_keys that takes a dictionary named my_dictiona
 as a parameter. This function should return the sum of the values of all even keys.
 """
 
-
 # Write your sum_even_keys function here:
 
-# Uncomment these function calls to test your  function:
-# print(sum_even_keys({1:5, 2:2, 3:3}))
+def sum_even_keys(my_dictionary):
+    sum = 0
+    for arg in my_dictionary.keys():
+        if arg % 2 == 0:
+            sum = sum + my_dictionary[arg]
+    return sum
+print(sum_even_keys({1: 5, 2: 2, 3: 3}))
 # should print 2
-# print(sum_even_keys({10:1, 100:2, 1000:3}))
+print(sum_even_keys({10: 1, 100: 2, 1000: 3}))
 # should print 6
-
 
 """
 3. Add Ten
@@ -35,12 +41,14 @@ The function should add 10 to every value in my_dictionary and return my_diction
 """
 # Write your add_ten function here:
 
-# Uncomment these function calls to test your  function:
-# print(add_ten({1:5, 2:2, 3:3}))
+def add_ten(my_dictionary):
+ for x in my_dictionary.keys():
+   my_dictionary[x] = my_dictionary[x] + 10
+ return my_dictionary
+print(add_ten({1:5, 2:2, 3:3}))
 # should print {1:15, 2:12, 3:13}
-# print(add_ten({10:1, 100:2, 1000:3}))
+print(add_ten({10:1, 100:2, 1000:3}))
 # should print {10:11, 100:12, 1000:13}
-
 
 """
 4. Values That Are Keys
